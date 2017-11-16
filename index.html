@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Parallax Scrolling - Demo</title>
+	<meta http-equiv="Content-Type" content="text/html">
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta name="author" content="Lee">
+
+	<link rel="stylesheet" href="css/reset.css" media="all">
+	<link rel="stylesheet" href="css/screen.css" media="screen">
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="resources/parallax/jquery.parallax.js"></script>
+
+	<script>
+		$(window).load(function(){
+			$('.parallax').parallax({
+				autoScroll:false,
+				autoScrollSpeed:10000,
+				autoScrollDelay:3000,
+				autoScrollType:'point',
+				layers:[
+					// layer 1 - sun
+					{
+						speed:{
+							vertical:-0.25,
+							horizontal:-0.48
+						}
+					},
+					// layer 2 - horizon
+					{
+						speed:{
+							vertical:0.5,
+							horizontal:0
+						}
+					},
+
+					// layer 3 - clouds
+					{
+						speed:{
+							vertical:0.25,
+							horizontal:0.50
+						}
+					},
+					// layer 4 - clouds
+					{
+						speed:{
+							vertical:0.4,
+							horizontal:0.4
+						}
+					},
+					// layer 5 - clouds
+					{
+						speed:{
+							vertical:0.50,
+							horizontal:0.25
+						}
+					},
+
+					// layer 6 - small hill
+					{
+						speed:{
+							vertical:1.27,
+							horizontal:0.05
+						}
+					},
+					// layer 7 - hill
+					{
+						speed:{
+							vertical:1.27,
+							horizontal:-0.1
+						}
+					},
+					// layer 8 - sheep
+					{
+						speed:{
+							vertical:1.27,
+							horizontal:-0.15
+						}
+					},
+					// layer 9 - hill left
+					{
+						speed:{
+							vertical:1.25,
+							horizontal:0
+						}
+					},
+					// layer 10 - sheep left
+					{
+						speed:{
+							vertical:1.27,
+							horizontal:-0.01
+						}
+					},
+
+					// layer 11 - forest
+					{
+						speed:{
+							vertical:2.5,
+							horizontal:0.25
+						}
+					},
+					// layer 12 - forest foreground
+					{
+						speed:{
+							vertical:1.01,
+							horizontal:0.1
+						}
+					},
+
+					// layer 13
+					{
+						speed:0,
+						zIndex:999,
+						onLoad:'hide',
+						onPosition:''	// this will be a list of functions etc to call at certain pixel coordinates
+					}
+				]
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div id="wrapper">
+		<header id="header">
+			<div class="inner">
+				<h1>Parallax Demo</h1>
+
+				<nav id="nav">
+					<ul>
+						<li>
+							<a href="#article1">Article 1</a>
+							<a href="#article2">Article 2</a>
+							<a href="#article3">Article 3</a>
+							<a href="#article4">Article 4</a>
+							<a href="#theEnd">The End</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<div id="content" class="inner">
+			<article id="article1" class="left">
+				<h2>Article 1</h2>
+
+				<p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.</p>
+			</article>
+
+			<article id="article2" class="right">
+				<h2>Article 2</h2>
+
+				<p>Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass.</p>
+			</article>
+
+			<article id="article3" class="right">
+				<h2>Article 3</h2>
+
+				<p>Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr Glass.</p>
+			</article>
+
+			<article id="article4" class="right">
+				<h2>Article 4</h2>
+
+				<p>Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr Glass.</p>
+			</article>
+
+			<article id="theEnd" class="center">
+				<h2>The End!</h2>
+
+				<p>This is the end.. Beautiful friend, This is the end..</p>
+			</article>
+		</div>
+
+		<footer id="footer">
+			<div class="inner">
+				<div class="copy">built by Lee Langley</div>
+
+				<a href="#header">Parallax Scrolling Demo</a>
+			</div>
+		</footer>
+	</div>
+
+
+	<!-- sunset -->
+	<div class="parallax layer1">
+		<div class="sun"></div>
+	</div>
+	<div class="parallax layer2">
+		<div class="horizon"></div>
+	</div>
+
+	<!-- clouds -->
+	<div class="parallax layer3">
+		<div class="cloud2" style="top:300px; right:10%;"></div>
+		<div class="cloud1" style="top:100px; right:60%;"></div>
+		<div class="cloud1" style="top:700px; right:40%;"></div>
+		<div class="cloud2" style="top:50px; left:140%;"></div>
+		<div class="cloud1" style="top:400px; left:120%;"></div>
+		<div class="cloud1" style="top:900px; left:100%;"></div>
+	</div>
+
+	<div class="parallax layer4">
+		<div class="cloud1" style="top:850px; right:0;"></div>
+		<div class="cloud1" style="top:5px; left:100%;"></div>
+		<div class="cloud1" style="top:300px; left:90%;"></div>
+		<div class="cloud1" style="top:310px; left:30%;"></div>
+		<div class="cloud1" style="top:600px; left:60%;"></div>
+		<div class="cloud2" style="top:800px; left:2%;"></div>
+	</div>
+
+	<div class="parallax layer5">
+		<div class="cloud2" style="top:500px; left:10%;"></div>
+		<div class="cloud2" style="top:800px; left:80%;"></div>
+		<div class="cloud1" style="top:40px; left:50%;"></div>
+	</div>
+
+	<!-- hills -->
+	<div class="parallax layer6">
+		<div class="smallHill"></div>
+	</div>
+
+	<div class="parallax layer7">
+		<div class="hill"></div>
+	</div>
+
+	<div class="parallax layer8">
+		<div class="sheep"></div>
+	</div>
+
+	<div class="parallax layer9">
+		<div class="hill left"></div>
+		<div class="grass"></div>
+	</div>
+
+	<div class="parallax layer10">
+		<div class="sheep left"></div>
+	</div>
+
+	<div class="parallax layer11">
+		<div class="forest"></div>
+		<div class="forest foreground bottom"></div>
+	</div>
+
+	<div class="parallax layer12">
+		<div class="forest foreground"></div>
+	</div>
+
+	<div class="parallax layer13">
+		<div class="fadeIn">
+			<p>Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr Glass.</p>
+		</div>
+	</div>
+</body>
+</html>
